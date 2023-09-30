@@ -1,3 +1,7 @@
+
+/// <reference path="../utils/wines.d.ts" />
+import {Wines} from "../utils/wines";
+
 let count = 0;
 
 function updateCounter() {
@@ -5,6 +9,26 @@ function updateCounter() {
   if (counterElement) {
     counterElement.textContent = count.toString();
   }
+
+  if ( count % 2 == 0 ){
+    document.write ( Wines.CORAZON_DE_ROBLE_CABERNET )
+  }
+
+
+  if ( count % 3 == 0 ){
+    document.write ( Wines.CORAZON_DE_ROBLE_MALBEC )
+  }
+
+
+  if ( count % 4 == 0 ){
+    document.write ( Wines.WAYNA_CABERNET )
+  }
+
+  if ( count % 5 == 0 ){
+    document.write ( Wines.WAYNA_MALBEC )
+  }
+
+
 }
 
 function incrementCounter() {
