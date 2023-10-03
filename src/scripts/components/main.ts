@@ -1,6 +1,6 @@
 
-/// <reference path="../utils/wines.d.ts" />
-import {Wines} from "../utils/wines";
+// <reference path="../utils/wines.d.ts" /> 
+import { Wines } from "../utils/wines.js";
 
 let count = 0;
 
@@ -12,11 +12,11 @@ function updateCounter() {
 
   if ( count % 2 == 0 ){
     document.write ( Wines.CORAZON_DE_ROBLE_CABERNET )
-  }
+ }
 
 
   if ( count % 3 == 0 ){
-    document.write ( Wines.CORAZON_DE_ROBLE_MALBEC )
+   document.write ( Wines.CORAZON_DE_ROBLE_MALBEC )
   }
 
 
@@ -32,7 +32,7 @@ function updateCounter() {
 }
 
 function incrementCounter() {
-  count++;
+count++;
   updateCounter();
 }
 
@@ -44,3 +44,4 @@ if (incrementButton) {
 
 // Actualizar el contador inicial
 updateCounter();
+

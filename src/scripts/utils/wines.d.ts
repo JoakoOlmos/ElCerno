@@ -4,4 +4,3 @@ export enum Wines {
     WAYNA_MALBEC = "Wayna Malbec",
     WAYNA_CABERNET = "Wayna Cabernet"
 }
-
