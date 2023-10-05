@@ -1,23 +1,7 @@
 /** GLOBALES **/
 
-body {
+*{
     font-family: 'Gotham SSm A', sans-serif;
-}
-
-h1 {
-/** tamaño **/
-}
-
-h2 {
-/** tamañó **/
-}
-
-h3{
-/** tamaño **/
-}
-
-h4 {
-/** tamaño **/
 }
 
 :root{
@@ -34,11 +18,11 @@ h4 {
     --marron: #846c4c; 
 }
 
-/**.contenedor {
-    max-width: 1200px;
-    width: 95%;
+.contenedor {
+    max-width: 100%;
+    width: auto;
     margin: 0 auto;
-}**/
+}
 
 
 /** SECCION 1 **/ 
