@@ -6,7 +6,7 @@ body {
 
 .contenedor {
     max-width: 1200px;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -30,10 +30,14 @@ body {
     height: auto;
     object-fit: cover;
 }*/
-/** BOTONES **/
+
 
 /** SECCION 1 **/
-.seccion-1 .bg {
+.container-s1 {
+    margin: auto;
+}
+
+.container-s1 .bg {
     background: 
     linear-gradient( rgba(0, 0, 0, 0.9), rgba(82, 51, 10, 0)),
     url(../images/bodega/portada.jpg);
@@ -48,21 +52,19 @@ body {
     align-items: center;
     justify-content: center;
     border-bottom: 1.5px solid #fffefe;
-    font-family:    'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
 
-
- h2 {
+.container-s1 {
     color: var(--blanco);
     text-align: center;
     display: flex;
     justify-content: center;
     font-size: 30px;
-    text-transform: uppercase;
 }
 
-.bg img {
+.container-s1 .bg img {
     height: 110px;
     width: auto;
     animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
@@ -89,95 +91,129 @@ body {
     padding: 15px;
 }
 
-em{
+em {
     font-size: 20px;
     animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 7s;
-    
 }
+
+
+
 
 /** SECCION 2 **/
-
-.seccion-2 {
-    margin:15px 5px 15px 5px;
-    padding-bottom: 15px;
-    border-bottom: 1.5px solid var(--negro);
-    background-color: var(--plateado);
+.container-s2 {
+    max-width: 1200px;
+    height: 600px;
+    margin: auto;
+    position: absolute;
 }
 
-h3 {
-    color: var(--secondary);
-    text-align: center;
-    text-transform: uppercase;
+.container-cards {
+    width: 100%;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    /*top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
 }
 
 .card {
-    margin-top: 10px;
-    border-radius: 10px 10px 10px 10px;
-    border: 2px solid var(--bordo);
+    width: 350px;
+    margin-bottom: 50px;
+    padding: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 300ms;
 }
 
-.contenedor {
-    width: 90%;
-    max-width: 720px;
-    margin: 0 auto;
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:hover .card-header img {
+    transform: scale(1.1);
+}
+
+.card-header {
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
 }
 
 .card-header img {
-    height: 200px;
-    width: 100%;
-    object-position: 50% 50%;
-    object-fit: cover;
+    width: 110%;
+    transition: all 300ms;
 }
 
-.card-title {
-    text-align: center;
-    margin: 0;
+.card h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    color: var(--plateado);
 }
 
-.card-description {
-    flex-grow: 1;
+.card p {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--plateado);
+    letter-spacing: 0.4px;
+
 }
 
 ul {
     list-style: none;
-}
-
-.card-description p {
-    color: var(--negro);
-}
-
-.card-header img {
-    border-bottom: 1.5px solid var(--carmesi);
-    border-radius: 10px 10px 0 0;
-    margin-bottom: -10px;
-}
-
-.card-body {
-    border-radius: 0 0 10px 10px;
-    background-color: #fff;
-    padding: 15px 15px;
+    color: var(--plateado);
     text-align: center;
-    border: 1px solid #ccc;
-    background: var(--dorado1);
 }
 
-.btn {
-    display: block;
-    background-color: var(--marron);
-    padding: 5px;
-    text-decoration: none;
-    color: var(--blanco);
-    text-align: center;
+.card hr {
+    margin-top: 30px;
+    border: none;
+    height: 0.2px;
+    background: var(--plateado);
+}
+
+.card-footer {
     margin-top: 10px;
+    display: flex;
 }
- 
-/**@media screen and (min-width: 768px) and (max-width: 1200px) {
-    .seccion-2 {
-        display: grid;
+
+a {
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 768px) {
+    .container-cards {
+        margin-top: 100px;
+        padding-bottom: 100px;
     }
-  } 
-**/
+
+    .card {
+        margin: 0 45px 0 45px;
+    }
+
+    .card:first-of-type {
+        padding-left: 25px;
+    }
+
+    /*.card:last-of-type {
+
+    }*/
+}
+
 
 /** SECCION 3 **/
 
@@ -269,4 +305,13 @@ h3 {
 .footer p {
     padding-bottom: 50px;
     margin-bottom: 25px;
+}
+
+/** BOTONES **/
+.boton-card {
+    display: inline-block;
+    margin: 3px;
+    padding: 5px;
+    background-color: var(--dorado1);
+    border-radius: 13px;
 }
