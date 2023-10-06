@@ -3,141 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./src/images/elcerno32.png"/>
-    <link rel="stylesheet" href="src/css/normalized.css">
-    <link rel="stylesheet" href="src/css/index.css">
-    <title>Simple TypeScript Example</title>
+    <link rel="icon" type="image/png" href="src/images/favicon-32x32.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bodega El Cerno</title>
   </head>
 
   <body>
-    <header>
-
-    </header> 
-
-    <section class="contenedor seccion-1" id="presentacion">
-      <div class="contenedor">
-        <h2 class=""> 
-          Bodega Familiar y Artesanal
-        </h2>
-        <img src="" alt="">
-        <!-- <img src="/ElCerno/src/images/logodorado.png"> -->
-        <p>
-          <span> Bienbebidos</span>
-        </p>
-        <p>
-          Viña el Cerno es una bodega donde acompañado de deliciosos Vinos Orgánicos los invita a perseguir sus Utopías y a dejar volar su imaginación a través de cada una de nuestras historia
-        </p>
-      </div>
-    </section>
-    <section id="descripcion">
-      <div class="grid-card-1">
-        <div>
-          <h3>
-            quienes somos?
-          </h3>
-          <p> 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, molestias velit temporibus illo optio eaque impedit fuga, laudantium accusantium quaerat doloremque, odit sunt aliquid consequatur ullam ipsam aspernatur.<br>
-            Quod, inventore.
-          </p>
-        </div>
-        <div>
-          <img src=""> <!-- resta saber si aca va a haber un slider o si la foto es estatica -->
-        </div>
-      </div>
-      <div class="grid-card-2">
-        <div>
-          <h3>
-            visitas y degustaciones
-          </h3>
-          <p> 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, molestias velit temporibus illo optio eaque impedit fuga, laudantium accusantium quaerat doloremque, odit sunt aliquid consequatur ullam ipsam aspernatur.<br>
-            Quod, inventore.
-          </p>
-        </div>
-        <div>
-          <img src=""> <!-- resta saber si aca va a haber un slider o no -->
-        </div>
-      </div>
-      <div class="grid-card-3">
-        <div>
-          <h3>
-            nuestros vinos y espumosos
-          </h3>
-          <p> 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, molestias velit temporibus illo optio eaque impedit fuga, laudantium accusantium quaerat doloremque, odit sunt aliquid consequatur ullam ipsam aspernatur.<br>
-            Quod, inventore.
-          </p>
-        </div>
-        <div>
-          <img src=""> <!-- resta saber si aca va a haber un slider o no y aca seguramente vaya el video de la mina -->
+    <section class="seccion-1">
+      <div class="bg">
+        <h2>Bodega Familiar y Artesanal</h2>
+        <img src="src/images/logodorado.png">
+        <div class="bienvenidos">
+          <h2>Bienbebido</h2>
+          <p>Viña el Cerno es una bodega donde acompañado de deliciosos Vinos Orgánicos los invita a perseguir sus Utopías y a dejar volar su imaginación a través de cada una de nuestras historias</p>
         </div>
       </div>
     </section>
-    <main>
-      <section id="cards">
-        <div>
-            <h2>
-              Precios
-            </h2>
-            <div class="">
-              <ul class="">
-                <li>
-                  <div class="">
-                    <h3>
-                      Nombre
-                    </h3>
-                    <p class=""></p>        <!-- algo referido al vino,varietal,cosecha,año,detalles,lo que sea -->
-                      <ul>                  <!-- aca irian los varietales,por el momento de minimo 3 -->
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                      </ul>
-                    <a href="#" class="">Comprar</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="">
-                    <h3>
-                      Nombre
-                    </h3>
-                    <p class=""></p>        <!-- algo referido al vino,varietal,cosecha,año,detalles,lo que sea -->
-                      <ul>                  <!-- aca irian los varietales,por el momento de minimo 3 -->
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                      </ul>
-                    <a href="#" class="">Comprar</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="">
-                    <h3>
-                      Nombre
-                    </h3>
-                    <p class=""></p>        <!-- algo referido al vino,varietal,cosecha,año,detalles,lo que sea -->
-                      <ul>                  <!-- aca irian los varietales,por el momento de minimo 3 -->
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                      </ul>
-                    <a href="#" class="">Comprar</a>
-                  </div>
-                </li>
-              </ul>
+      
+    <section class="seccion-2">
+        <div class="contenedor">
+          <div class="card">
+            <div class="card-header">
+              <img src="src/images/moto1.jpg" alt="Card1">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Nuestra Bodega</h3>
+              <p class="card-description">
+                DESDE 1996 <br><br>
+                Bodega Viña el Cerno es una gran familia. Todos se complementan y son necesarios con el fin de transmitir sus propias experiencias a cada uno de los visitantes, les enseñamos nuestros vinos, producto del trabajo que comienza con el cuidado mismo de las viñas, le ayudamos también a entender sus terruños y a degustarlos, encontrando en cada uno de ellos su mensaje especial.
+              </p>
+              <a href="#" class="btn">Quienes Somos ></a>
             </div>
           </div>
+          <div class="card">
+            <div class="card-header">
+              <img src="src/images/moto2.jpg" alt="Card2">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Visitas y Degustaciones</h3>
+              <p class="card-description">
+                TURISMO <br><br>
+                Lunes a Sábados y Feriados de <span>10</span> a <span>17</span> hs <br>
+                Domingo <span>Cerrado</span> <br><br>
+
+                Español/English
+              </p>
+              <a href="#" class="btn">Visitá nuestra Bodega ></a>
+              <a href="#" class="btn">Reservas ></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <img src="src/images/moto3.jpg" alt="Card3">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Nuestros Vinos y Espumosos</h3>
+              <p class="card-description">
+                <ul>
+                  <li>Vinos de Autor</li>
+                  <li>Viña el Cerno</li>
+                  <li>Corazón de Roble</li>
+                  <li>WAYNA</li>
+                  <li>Utopía - Reserva</li>
+                  <li>Espumosos</li>
+                </ul>
+              </p>
+              <a href="#" class="btn">Nuestras Historias ></a>
+            </div>
+          </div>
+        </div>
+    </section>
+    <main>
+      <section class="seccion-3" id="cards">
+        <div class="contenedor">
+          <div class="card">
+            <div class="card-header">
+              <img src="src/images/cardimgtemp.jpg" alt="Vino1">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Vino1</h3>
+              <p class="card-description">
+                Breve Descripcion/Items
+              </p>
+              <a href="#" class="btn">Ver más ></a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+                <img src="src/images/cardimgtemp.jpg" alt="Vino2">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Vino2</h3>
+              <p class="card-description">
+                Breve Descripcion/Items
+              </p>
+              <a href="#" class="btn">Ver más ></a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <img src="src/images/cardimgtemp.jpg" alt="Vino3">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Vino3</h3>
+              <p class="card-description">
+                Breve Descripcion/Items
+              </p>
+              <a href="#" class="btn">Ver más ></a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
-      <div>
-        <img src="">
-      </div>
-      <div>
+      <div class="footer">
+        <img src="src/images/logoplateado.png">
         <p>
-          El Cerno ARR &copy;
+          Todos los Derechos Reservados &copy;
         </p>
       </div>
     </footer>
+
+    <script>
+        scr="/index.js"
+    </script>
+
   </body>
-  
 </html>

@@ -1,18 +1,247 @@
 /** GLOBALES **/
 body {
+    margin: 0;
     font-family: 'Gotham SSm A', sans-serif;
 }
 
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+:root{
+    --dorado1: #d2ae6d;
+    --dorado2: #d0a96a;
+    --dorado3: #c99960;
+    --bordo: #6c0624;
+    --carmesi: #883830;
+    --rojo: #b72537;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --plateado: #d6d6d7;
+    --gris: #84848c;
+    --marron: #846c4c; 
+}
+
+
+/*img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}*/
 /** BOTONES **/
 
 /** SECCION 1 **/
-.seccion-1 {
-    background-image: url(../src/images/pexels-megapixelstock-113176.jpg);
+.seccion-1 .bg {
+    background-image: url(/src/images/pexels-megapixelstock-113176.jpg);
+    background-repeat: none;
+    background-position: center center;
+    background-size: cover;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1.5px solid #000000;
+    
+}
+
+h2 {
+    text-align: center;
+    color: var(--blanco);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    padding: 15px;
+
+}
+
+.bg img {
+    height: 100px;
+    width: auto;
+}
+
+.bienvenidos p{
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 23px;
+    margin: 10px;
 }
 
 /** SECCION 2 **/
 
+.seccion-2 {
+    margin:15px 5px 15px 5px;
+    padding-bottom: 15px;
+    border-bottom: 1.5px solid var(--negro);
+}
+
+h3 {
+    color: var(--secondary);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card {
+    margin-top: 10px;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid var(--bordo);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.card-header img {
+    height: 200px;
+    width: 100%;
+    object-position: 50% 50%;
+    object-fit: cover;
+}
+
+.card-title {
+    text-align: center;
+    margin: 0;
+}
+
+.card-description {
+    flex-grow: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+.card-description p {
+    color: var(--negro);
+}
+
+.card-header img {
+    border-bottom: 1.5px solid var(--carmesi);
+    border-radius: 10px 10px 0 0;
+    margin-bottom: -10px;
+}
+
+.card-body {
+    border-radius: 0 0 10px 10px;
+    background-color: #fff;
+    padding: 15px 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: var(--dorado1);
+}
+
+.btn {
+    display: block;
+    background-color: var(--marron);
+    padding: 5px;
+    text-decoration: none;
+    color: var(--blanco);
+    text-align: center;
+    margin-top: 10px;
+}
+ 
+/**@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .seccion-2 {
+        display: grid;
+    }
+  } 
+**/
+
 /** SECCION 3 **/
 
+.seccion-3 {
+    margin:15px 5px 15px 5px;
+    padding-bottom: 15px;
+    border-bottom: 1.5px solid var(--negro);
+}
+
+h3 {
+    color: var(--negro);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.seccion-3 .card {
+    margin-top: 10px;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid var(--bordo);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.seccion-3 .card-header img {
+    height: auto;
+    width: 100%;
+    object-position: 50% 50%;
+    object-fit: cover;
+}
+
+.seccion-3 .card-title {
+    text-align: center;
+    margin: 0;
+}
+
+.seccion-3 .card-description {
+    flex-grow: 1;
+}
+
+.seccion-3 .card-description p {
+    color: var(--blanco);
+}
+
+.seccion-3 .card-header img {
+    border-bottom: 1.5px solid var(--carmesi);
+    border-radius: 10px 10px 0 0;
+    margin-bottom: -10px;
+}
+
+.seccion-3 .card-body {
+    border-radius: 0 0 10px 10px;
+    background-color: #fff;
+    padding: 15px 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: var(--rojo);
+}
+
+.seccion-3 .btn {
+    display: block;
+    background-color: var(--plateado);
+    padding: 5px;
+    text-decoration: none;
+    color: var(--negro);
+    text-align: center;
+    margin-top: 10px;
+}
+
 /** FOOTER **/
+
+.footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer img {
+    height: auto;
+    width: 300px;
+}
+
+.footer p {
+    padding-bottom: 50px;
+    margin-bottom: 25px;
+}
