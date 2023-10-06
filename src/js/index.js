@@ -14,8 +14,7 @@
 
     // Llamar a las funciones para procesar y mostrar los datos
     processExcelData(excelData);
-    displayDataInList(excelData);
-    displayDataInUi(excelData);
+    displayWinesInCard(excelData);
   };
 
   // Realizar la lectura del archivo desde la URL
@@ -33,21 +32,8 @@ function processExcelData(data) {
   // Aquí puedes realizar cualquier otra operación con los datos
 }
 
-function displayDataInList(data) {
-  const dataList = document.getElementById("dataList");
-
-  // Limpiar la lista existente, si la hay
-  dataList.innerHTML = "";
-
-  // Iterar sobre los datos y agregar elementos de lista
-  data.forEach((item) => {
-    const listItem = document.createElement("li");
-    listItem.textContent = JSON.stringify(item);
-    dataList.appendChild(listItem);
-  });
-}
-
-function displayDataInUi(data) {
+ 
+function displayWinesInCard(data) {
   const wineListContainer = document.getElementById("wineList");
 
   // Itera sobre cada vino en el JSON
