@@ -34,33 +34,39 @@ body {
 
 /** SECCION 1 **/
 .seccion-1 .bg {
-    background-image: url(/src/images/pexels-megapixelstock-113176.jpg);
+    background: 
+    linear-gradient( rgba(0, 0, 0, 0.9), rgba(82, 51, 10, 0)),
+    url(/src/images/bodega/portada.jpg);
+     /* Ajusta los valores RGBA según tus preferencias */
     background-repeat: none;
     background-position: center center;
     background-size: cover;
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: 1.5px solid #000000;
+    border-bottom: 1.5px solid #fffefe;
+    font-family:    'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
 
-h2 {
-    text-align: center;
+
+ h2 {
     color: var(--blanco);
     text-align: center;
     display: flex;
     justify-content: center;
-    font-size: 50px;
-    padding: 15px;
-
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 .bg img {
-    height: 100px;
+    height: 110px;
     width: auto;
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 4s;
 }
 
 .bienvenidos p{
@@ -70,6 +76,24 @@ h2 {
     text-align: center;
     font-size: 23px;
     margin: 10px;
+    padding-bottom: 50px;
+}
+
+.bg span {
+    text-align: center;
+    color: var(--blanco);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 15px;
+}
+
+em{
+    font-size: 20px;
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 7s;
+    
 }
 
 /** SECCION 2 **/
@@ -78,6 +102,7 @@ h2 {
     margin:15px 5px 15px 5px;
     padding-bottom: 15px;
     border-bottom: 1.5px solid var(--negro);
+    background-color: var(--plateado);
 }
 
 h3 {
