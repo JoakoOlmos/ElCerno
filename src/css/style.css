@@ -246,8 +246,19 @@ ul {
     }*/
 }
 
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 60%;
+      margin: auto;
+  }
+
 
 /** SECCION 3 **/
+.main .cards #theCarousel .carousel-inner{
+    height: 100vh;
+    background-color: #322a7c;
+}
+
 .container-s3 {
     display: flex;
     flex-wrap: wrap;
@@ -257,11 +268,11 @@ ul {
     background: var(--dorado1);
 }
 .flip-card {
-    position: relative;
-    width: 300px;
-    height: 350px;
+    position: sticky;
+    width: 52vh;
+    height: 69vh;
     margin: 20px;
-}
+ }
 
 .flip-card .face {
     position: absolute;
