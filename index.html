@@ -12,47 +12,44 @@
 </head>
 
 <body>
-  <section class="seccion-1">
+  <section class="container-s1">
     <div class="bg">
-
       <img src="src/images/logodorado.png">
-      <br><br><br>
+      <br><br><br><br>
       <div class="bienvenidos">
-        
         <p>
           <em>
             Viña el Cerno es una bodega donde acompañado
             de deliciosos Vinos Orgánicos,
           </em>
-
           <em>
             los invita a perseguir sus Utopías y a dejar volar su imaginación a través
             de cada una de nuestras historias.
           </em>
-
         </p>
-
-        
       </div>
     </div>
   </section>
 
-  <section class="seccion-2">
-    <div class="contenedor">
-      <div class="card">
+  <section class="contaniner-s2">
+    <div class="container-cards">
+      <div class="card"> 
         <div class="card-header">
           <img src="src/images/bodega/bodega.jpg" alt="Card1">
         </div>
         <div class="card-body">
           <h3 class="card-title">Nuestra Bodega</h3>
-          <p class="card-description">
-            DESDE 1996 <br><br>
+          <p class="card-description">    <!-- probar flex grow para tenerlos todos del mismo tamaño -->
+            <span>DESDE 1996</span> <br><br>
             Bodega Viña el Cerno es una gran familia. Todos se complementan y son necesarios con el fin de transmitir
             sus propias experiencias a cada uno de los visitantes, les enseñamos nuestros vinos, producto del trabajo
             que comienza con el cuidado mismo de las viñas, le ayudamos también a entender sus terruños y a degustarlos,
             encontrando en cada uno de ellos su mensaje especial.
           </p>
-          <a href="#" class="btn">Quienes Somos ></a>
+          <hr>
+          <div class="card-footer">
+            <a href="#" class="boton-card">Quienes Somos</a>
+          </div>          
         </div>
       </div>
       <div class="card">
@@ -62,14 +59,16 @@
         <div class="card-body">
           <h3 class="card-title">Visitas y Degustaciones</h3>
           <p class="card-description">
-            TURISMO <br><br>
+            <span>TURISMO</span><br><br><br>
             Lunes a Sábados y Feriados de 10hs a 17hs <br>
-            Domingo Cerrado <br><br>
-
+            Domingo Cerrado <br><br><br>
             Español/English
           </p>
-          <a href="#" class="btn">Visitá nuestra Bodega ></a>
-          <a href="#" class="btn">Reservas ></a>
+          <hr>
+        </div>  
+        <div class="card-footer">
+          <a href="#" class="boton-card">Visitá nuestra Bodega</a>
+          <a href="#" class="boton-card">Reservas</a>
         </div>
       </div>
       <div class="card">
@@ -88,20 +87,38 @@
             <li>Espumosos</li>
           </ul>
           </p>
-          <a href="#" class="btn">Nuestras Historias ></a>
+          <hr>
+        </div>
+        <divc class="card-footer">
+          <a href="#" class="boton-card">Nuestras Historias</a>
         </div>
       </div>
     </div>
   </section>
+
   <main>
-    <section class="seccion-3" id="cards">
-      <div class="contenedor">
-        <div class="row" id="wineList">
-          <!-- El contenido se llenará con JavaScript -->
+    <section class="container-s3" id="cards">
+      <div class="flip-card">
+        <div class="row" id="wineList"> 
+          <div class="face front">
+            <img src="src/images/corazon_de_roble.png" alt="Vino1">
+            <h3>Vino1</h3>
+          </div>
+          <div class="face back">
+            <h3>Vino1</h3>
+            <p> 
+              Varietal:<br>
+              Stock:<br>
+              Precio:
+            </p>
+          <div class="info">
+            <a href="#">Ver Más</a>
+          </div>
         </div>
+                  <!-- El contenido se llenará con JavaScript -->
       </div>
     </section>
-  </main>
+  </main> 
   <footer>
     <div class="footer">
       <img src="src/images/logoplateado.png">
@@ -123,6 +140,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
 
 <script src="./src/component/cardComponent/cardComponent.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
 <script src="./src/js/index.js"></script>
 
 </html>
