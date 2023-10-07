@@ -1,56 +1,72 @@
-//const excelFileUrl = "../src/docs/velcerno.xlsx";
-// Crear una nueva instancia de FileReader
-//const reader = new FileReader();
+const sheetId = "1W5RuCkiPPvxA_KOoAIPc5ue7whjc7-G1mO71HjDey_A";
+const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+const sheetName = "user-data";
+const query = encodeURIComponent("Select *");
+const url = `${base}&sheet=${sheetName}&tq=${query}`;
+const data = [];
+const output = document.querySelector(".output");
+fetch(url)
+  .then((res) => res.text())
+  .then((rep) => {
+    //Remove additional text and extract only JSON:
+    const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+    console.log(JSON.stringify(jsonData, 2, 2));
+    const vinos = jsonData.table.rows.map((row) => {
+      return {
+        Nombre: row.c[0].v,
+        Varietal: row.c[1].v,
+        Stock: row.c[2].v,
+        Precio: row.c[3].v,
+        Imagen: row.c[4].v,
+      };
+    });
 
-// Configurar el evento onload para ejecutarse cuando se complete la lectura del archivo
-//reader.onload = function (e) {
-//  const data = new Uint8Array(e.target.result);
+    executeCardComponent(vinos);
+  })
+  .catch((error) => {
+    console.error("Error al cargar el sheet:", error);
+  });
 
-  // Procesar el archivo Excel
-//  const workbook = XLSX.read(data, { type: "array" });
-//  const sheetName = workbook.SheetNames[0];
-//  const excelData = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
+function executeCardComponent(data) {
+  console.log(JSON.stringify(data, 2, 2));
+  const wineListContainer = document.getElementById("wine-card-carrusel");
 
-  // Llamar a las funciones para procesar y mostrar los datos
-//  executeCardComponent(excelData);
-//};
+  // Itera sobre cada vino en el JSON
+  // Itera sobre cada vino en el JSON
+  data.forEach((vino, index) => {
+    // Realizar la carga del archivo wine-card-template.html
+    fetch("src/component/cardComponent/cardComponent.html")
+      .then((response) => response.text())
+      .then((template) => {
+        //  Reemplazar las variables del template con datos reales
+        const wineCardHTML = template
+          .replaceAll("{IMAGE}", vino.Imagen)
+          .replaceAll("{NAME}", vino.Nombre)
+          .replaceAll("{VARIETAL}", vino.Varietal)
+          .replaceAll("{STOCK}", vino.Stock)
+          .replaceAll("{PRICE}", vino.Precio)
+          .replaceAll("item", index === 0 ? "item active" : "item");
+        //Crear un elemento div para almacenar la tarjeta y agregarlo al contenedor
+        const wineCardContainer = document.createElement("div");
+        wineCardContainer.innerHTML = wineCardHTML;
+        wineListContainer.appendChild(wineCardContainer.firstChild);
+      })
+      .then((data) => {
+        wineListContainer.innerHTML += `
+          <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">anterior</span>
+          </a>
+          <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">siguiente</span>
+          </a>
+      `;
+      })
+      .catch((error) => {
+        console.error("Error al cargar el template:", error);
+      });
+  });
 
-// Realizar la lectura del archivo desde la URL
-//fetch(excelFileUrl)
-//  .then((response) => response.blob()) // Convertir la respuesta a un Blob
-//  .then((blob) => reader.readAsArrayBuffer(blob))
-//  .catch((error) => {
-//    console.error("Error al cargar el archivo:", error);
-//  });
-
-
-
-
-//function executeCardComponent(data) {
-//    const wineListContainer = document.getElementById("wineList");
-  
-    // Itera sobre cada vino en el JSON
-    // Itera sobre cada vino en el JSON
-//    data.forEach((vino) => {
-      // Realizar la carga del archivo wine-card-template.html
-//      fetch("src/component/cardComponent/cardComponent.html")
-//        .then((response) => response.text())
-//        .then((template) => {
-          // Reemplazar las variables del template con datos reales
-//          const wineCardHTML = template
-//            .replaceAll("{IMAGE}", vino.Imagen)
-//            .replaceAll("{NAME}", vino.Nombre)
-//            .replaceAll("{VARIETAL}", vino.Varietal)
-//            .replaceAll("{STOCK}", vino.Stock)
-//            .replaceAll("{PRICE}", vino.Precio);
-  
-          // Crear un elemento div para almacenar la tarjeta y agregarlo al contenedor
-//          const wineCardContainer = document.createElement("div");
-//          wineCardContainer.innerHTML = wineCardHTML;
-//          wineListContainer.appendChild(wineCardContainer.firstChild);
-//        })
-//        .catch((error) => {
-//          console.error("Error al cargar el template:", error);
-//        });
-//    });
-//  }
+  wineListContainer.appendChild(wineCardContainer.firstChild);
+}
