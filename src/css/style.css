@@ -126,7 +126,6 @@ em {
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    margin-top: 50px;
     padding-bottom: 50px;
     /*top: 50%;
     left: 50%;
@@ -135,6 +134,7 @@ em {
 
 .card {
     width: 350px;
+    margin-top: 50px;
     margin-bottom: 50px;
     padding: 20px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
@@ -219,14 +219,13 @@ ul {
 
 @media screen and (min-width: 768px) {
     .container-cards {
-        margin-top: 100px;
         padding-bottom: 100px;
     }
 
     .card {
         display: flex;
         flex-direction: column;
-        margin: 0 45px 0 45px;
+        margin: 100px 45px 0 45px;
     }
 
     .card:first-of-type {
@@ -292,7 +291,7 @@ ul {
     width: 100%;
     height: 45px;
     line-height: 45px;
-    color: #fff;
+    color: var(--blanco);
     background: rgba(136, 56, 48, 0.4);
     text-align: center;
     overflow: hidden;
