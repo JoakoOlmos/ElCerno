@@ -44,25 +44,14 @@ function executeCardComponent(data) {
           .replaceAll("{NAME}", vino.Nombre)
           .replaceAll("{VARIETAL}", vino.Varietal)
           .replaceAll("{STOCK}", vino.Stock)
-          .replaceAll("{PRICE}", vino.Precio)
-          .replaceAll("item", index === 0 ? "item active" : "item");
+          .replaceAll("{PRICE}", vino.Precio);
+          //.replaceAll("item", index === 0 ? "item active" : "item");
         //Crear un elemento div para almacenar la tarjeta y agregarlo al contenedor
         const wineCardContainer = document.createElement("div");
         wineCardContainer.innerHTML = wineCardHTML;
         wineListContainer.appendChild(wineCardContainer.firstChild);
       })
-      .then((data) => {
-        wineListContainer.innerHTML += `
-          <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">anterior</span>
-          </a>
-          <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">siguiente</span>
-          </a>
-      `;
-      })
+     
       .catch((error) => {
         console.error("Error al cargar el template:", error);
       });

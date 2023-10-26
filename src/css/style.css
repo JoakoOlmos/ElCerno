@@ -63,10 +63,11 @@ body {
 }
 
 .container-s1 .bg img {
-    height: 110px;
+    height: 150px;
     width: auto;
     animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 4s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
 }
 
 .bienvenidos p{
@@ -77,7 +78,22 @@ body {
     font-size: 23px;
     margin: 10px;
     padding-bottom: 50px;
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    font-size: 18px;
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 7s;
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
 .bg span {
     text-align: center;
@@ -88,22 +104,17 @@ body {
     font-size: 30px;
     padding: 15px;
 }
-
-em {
-    font-size: 25px;
-    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 7s;
-}
+ 
 
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .container-s1 .bg img {
-        height: 330px;
+        height: 110px;
         width: auto;
     }
 
     em {
-        font-size: 50px;
+        font-size: 25px;
     }
 }
 
@@ -118,8 +129,16 @@ em {
     margin: auto;
 }
 
+main h1{
+    text-align: center;
+}
+
+.wine-card-carrusel{
+    display: flex;
+}
+
 .container-cards {
-    background: var(--rojo);
+    background: #8d1e2d;
     max-width: 100%;
     margin:auto;
     display: flex;
@@ -145,6 +164,10 @@ em {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     transition: all 300ms;
+}
+
+.item{
+    width: 10px;
 }
 
 .card:hover {
@@ -268,10 +291,10 @@ ul {
     background: var(--dorado1);
 }
 .flip-card {
-    position: sticky;
-    width: 52vh;
-    height: 69vh;
-    margin: 20px;
+    position: relative;
+    width: 40vh;
+    height: 50vh;
+    margin: 10px;
  }
 
 .flip-card .face {
@@ -300,10 +323,10 @@ ul {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 45px;
-    line-height: 45px;
+    height: 59px;
+    line-height: 61px;
     color: var(--blanco);
-    background: rgba(136, 56, 48, 0.4);
+    background: rgba(136, 56, 48, 0.7);
     text-align: center;
     overflow: hidden;
 }
