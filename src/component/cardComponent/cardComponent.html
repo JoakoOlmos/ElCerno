@@ -1,26 +1,30 @@
 <div class="item">
 
-  <div class="flip-card"   >
+  <div class="flip-card">
     <div class="face front">
-      <img src="src/images/wines/{IMAGE}" alt="{NAME}" width="600" height="424">
+      <img src="src/images/wines/{IMAGE}" onerror="this.src='src/images/wines/errorimg.png';" alt="{NAME}" width="600"
+        height="424">
       <h3>{NAME}</h3>
     </div>
+
     <div class="face back">
-      <h3>{NAME}</h3>
-      <p>
-        Varietal: {VARIETAL} <br>
-        Stock: {STOCK}<br>
-        Precio: ${PRICE}
-      </p>
+
+
+      <hr>
+      {VARIETAL}
+      <hr>
+      Stock: {STOCK}
+      <hr>
+      Precio: ${PRICE}
+      <hr>
+
       <div class="info">
         <a href="#">Ver Más</a>
       </div>
     </div>
   </div>
 
- 
 
- 
+
+
 </div>
-
-
