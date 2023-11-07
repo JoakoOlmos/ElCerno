@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="src/images/favicon-32x32.png" />
   <link rel="stylesheet" href="./src/css/normalized.css">
   <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -22,7 +23,7 @@
       <div class="bienvenidos">
         <p>
           <em>
-            Viña el Cerno es una bodega donde acompañado
+            Viña el Cerno es una bodega donde, acompañado
             de deliciosos Vinos Orgánicos,
           </em>
           <em>
@@ -34,77 +35,93 @@
     </div>
   </section>
 
+  <section>
 
+    <div class="container-s2">
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <!-- Card 1 -->
+              <div class="swiper-slide">
+                  <div class="card">
+                      <div class="card-header">
+                          <img src="/src/images/bodega/bodega.jpg" alt="Card 1">
+                      </div>
+                      <div class="card-body">
+                          <h3>Nuestra Bodega</h3>
+                          <p class="card-description"> 
+                              <span>DESDE 1996</span> <br><br>
+                              Bodega Viña el Cerno es una gran familia. Todos se complementan y son necesarios con el fin de transmitir
+                              sus propias experiencias a cada uno de los visitantes, les enseñamos nuestros vinos, producto del trabajo
+                              que comienza con el cuidado mismo de las viñas, le ayudamos también a entender sus terruños y a
+                              degustarlos, encontrando en cada uno de ellos su mensaje especial.
+                          </p>
+                          <hr>
+                          <div class="card-footer">
+                              <a href="#" class="boton-card">Quienes Somos</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
+              <!-- Card 2 -->
+              <div class="swiper-slide">
+                  <div class="card">
+                      <div class="card-header">
+                          <img src="/src/images/bodega/visitas.jpg" alt="Card 2">
+                      </div>
+                      <div class="card-body">
+                          <h3>Visitas y Degustaciones</h3>
+                          <p class="card-description">
+                              <span>TURISMO</span><br><br>
+                              Lunes a Sábados y Feriados:<span><br></span> <span>10hs</span> a <span>17hs</span><br><br><br>
+                              Domingos: <span><br></span> <span>Cerrado</span><br><br><br>
+                              Español/English
+                          </p>
+                          <hr>
+                          <div class="card-footer">
+                              <a href="#" class="boton-card">Visitá nuestra Bodega</a>
+                              <a href="#" class="boton-card">Reservas</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
-
-
-
-
-  <section class="contaniner-s2">
-    <div class="container-cards">
-      <div class="card">
-        <div class="card-header">
-          <img src="src/images/bodega/bodega.jpg" alt="Card1">
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Nuestra Bodega</h3>
-          <p class="card-description"> <!-- probar flex grow para tenerlos todos del mismo tamaño -->
-            <span>DESDE 1996</span> <br><br>
-            Bodega Viña el Cerno es una gran familia. Todos se complementan y son necesarios con el fin de transmitir
-            sus propias experiencias a cada uno de los visitantes, les enseñamos nuestros vinos, producto del trabajo
-            que comienza con el cuidado mismo de las viñas, le ayudamos también a entender sus terruños y a
-            degustarlos,
-            encontrando en cada uno de ellos su mensaje especial.
-          </p>
-          <hr>
-          <div class="card-footer">
-            <a href="#" class="boton-card">Quienes Somos</a>
+              <!-- Card 3 -->
+              <div class="swiper-slide">
+                  <div class="card">
+                      <div class="card-header">
+                          <img src="/src/images/bodega/coleccion.jpg" alt="Card 3">
+                      </div>
+                      <div class="card-body">
+                          <h3>Nuestros Vinos y Espumosos</h3><br><br>
+                          <div class="card-description">
+                            <ul>
+                              <li>Vinos de Autor</li>
+                              <li>Viña el Cerno</li>
+                              <li>Corazón de Roble</li>
+                              <li>WAYNA</li>
+                              <li>Utopía - Reserva</li>
+                              <li>Espumosos</li>
+                            </ul><br>
+                          </div>
+                          <hr>
+                          <div class="card-footer">
+                              <a href="#" class="boton-card">Nuestras Historias</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <img src="src/images/bodega/fondoswiper.jpg" alt="Card2">
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Visitas y Degustaciones</h3>
-          <p class="card-description">
-            <span>TURISMO</span><br><br><br>
-            Lunes a Sábados y Feriados de 10hs a 17hs <br>
-            Domingo Cerrado <br><br><br>
-            Español/English
-          </p>
-          <hr>
-        </div>
-        <div class="card-footer">
-          <a href="#" class="boton-card">Visitá nuestra Bodega</a>
-          <a href="#" class="boton-card">Reservas</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <img src="src/images/bodega/coleccion.jpg" alt="Card3">
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Nuestros Vinos y Espumosos</h3>
-          <p class="card-description">
-          <ul>
-            <li>Vinos de Autor</li>
-            <li>Viña el Cerno</li>
-            <li>Corazón de Roble</li>
-            <li>WAYNA</li>
-            <li>Utopía - Reserva</li>
-            <li>Espumosos</li>
-          </ul>
-          </p>
-          <hr>
-        </div>
-        <div class="card-footer">
-          <a href="#" class="boton-card">Nuestras Historias</a>
-      </div>
-    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/src/js/index.js"></script>
+
   </section>
+    
 
   <main>
     <h1>Nuestros vinos</h1>
@@ -124,16 +141,9 @@
     </div>
   </footer>
 
-
-
-
   <script>
     scr = "/index.js"
   </script>
-
-
-
-
 
 </body>
 
