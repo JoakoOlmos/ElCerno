@@ -282,6 +282,25 @@ ul {
     background-color: #322a7c;
 }
 
+.contenedor {
+    height: 60vh;
+    width: 60vh;
+}
+
+/* realizar de forma recursiva todos los elementos de .carousel-inner  transformar su texto a color blanco */
+
+.carousel-inner * {
+    color: #fff !important;
+   
+ }
+
+ .carousel-inner:hover{
+    cursor: pointer;
+
+ }
+
+ 
+
 .container-s3 {
     display: flex;
     flex-wrap: wrap;
