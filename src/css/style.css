@@ -135,7 +135,7 @@ body {
 }
 
 .container-cards {
-    background: linear-gradient(to right top, var(--carmesi), var(--dorado1));
+    background: linear-gradient(to right top, var(--bordo), var(--rojo));
     width: 100%;
     margin: auto;
     display: flex;
@@ -265,7 +265,20 @@ ul {
 .main .cards #theCarousel .carousel-inner {
     height: 100vh;
     background-color: #322a7c;
+ 
 }
+
+.section-s3{
+    background: linear-gradient(to right top, var(--negro), var(--dorado3), var(--negro) );
+    
+}
+
+.section-s3 *{
+    margin: 0 auto;
+    color:var(--blanco);
+    text-align: center;
+}
+
 
 
 /* realizar de forma recursiva todos los elementos de .carousel-inner  transformar su texto a color blanco */
