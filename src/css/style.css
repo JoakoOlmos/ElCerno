@@ -124,7 +124,6 @@ body {
 
 /** SECCION 2 **/
 .container-s2 {
-    
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -142,23 +141,17 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    padding-bottom: 50px;
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    position: relative;
-    display: flex;
-    flex-direction: column;
     width: 350px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 10px;
     padding: 20px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1) !important;
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
+    border-radius: 15px !important;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     transition: all 300ms;
@@ -172,14 +165,14 @@ body {
     transform: scale(1.1);
 }
 
-.card-header {
+.card .card-header {
     width: 100%;
     height: 180px;
     border-radius: 14px;
     overflow: hidden;
 }
 
-.card-header img {
+.card .card-header img {
     width: 110%;
     transition: all 300ms;
 }
@@ -197,9 +190,7 @@ body {
     margin-top: 20px;
     font-size: 14px;
     font-weight: 300;
-    color: var(--plateado);
-    letter-spacing: 0.4px;
-    flex-grow: 2;
+    letter-spacing: 0.5px;
 }
 
 .card span {
@@ -224,13 +215,16 @@ ul {
 .card-footer {
     margin-top: 10px;
     display: flex;
+    color: var(--blanco);
+    justify-content: space-between;
 }
 
 .card-footer a {
+    background: var(--carmesi);
     text-decoration: none;
+    color: var(--dorado2);
+    flex-grow: 2;
     text-align: center;
-    color: var(--dorado1);
-    flex-grow: 1;
 }
 
 
