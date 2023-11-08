@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
 }
 
-:root{
+:root {
     --dorado1: #d2ae6d;
     --dorado2: #d0a96a;
     --dorado3: #c99960;
@@ -21,7 +21,7 @@ body {
     --negro: #000000;
     --plateado: #d6d6d7;
     --gris: #84848c;
-    --marron: #846c4c; 
+    --marron: #846c4c;
 }
 
 
@@ -38,10 +38,10 @@ body {
 }
 
 .container-s1 .bg {
-    background: 
-    linear-gradient( rgba(0, 0, 0, 0.9), rgba(82, 51, 10, 0)),
-    url(../images/bodega/portada.jpg);
-     /* Ajusta los valores RGBA según tus preferencias */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.9), rgba(82, 51, 10, 0)),
+        url(../images/bodega/portada.jpg);
+    /* Ajusta los valores RGBA según tus preferencias */
     background-repeat: none;
     background-position: center center;
     background-size: cover;
@@ -52,7 +52,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+
 }
 
 .container-s1 {
@@ -65,12 +65,13 @@ body {
 .container-s1 .bg img {
     height: 150px;
     width: auto;
-    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation: fadeIn;
+    /* referring directly to the animation's @keyframe declaration */
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
 }
 
-.bienvenidos p{
+.bienvenidos p {
     color: var(--blanco);
     display: flex;
     flex-direction: column;
@@ -78,22 +79,25 @@ body {
     font-size: 23px;
     margin: 10px;
     padding-bottom: 50px;
-    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation: fadeIn;
+    /* referring directly to the animation's @keyframe declaration */
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
     font-size: 18px;
-    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation: fadeInUp;
+    /* referring directly to the animation's @keyframe declaration */
     animation-duration: 7s;
 }
 
 @keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 .bg span {
     text-align: center;
@@ -104,7 +108,7 @@ body {
     font-size: 30px;
     padding: 15px;
 }
- 
+
 
 
 @media screen and (min-width: 768px) {
@@ -131,7 +135,7 @@ body {
 
 .container-cards {
     width: 100%;
-    margin:auto;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -251,6 +255,7 @@ ul {
     .card p {
         flex-grow: 2;
     }
+
     /*.card:last-of-type {
 
     }*/
@@ -258,44 +263,73 @@ ul {
 
 
 /** SECCION 3 **/
-.main .cards #theCarousel .carousel-inner{
+.main .cards #theCarousel .carousel-inner {
     height: 100vh;
     background-color: #322a7c;
 }
 
-.contenedor {
-    height: 60vh;
-    width: 60vh;
-}
 
 /* realizar de forma recursiva todos los elementos de .carousel-inner  transformar su texto a color blanco */
 
 .carousel-inner * {
     color: #fff !important;
-   
- }
 
- .carousel-inner:hover{
+}
+
+.carousel-inner:hover {
     cursor: pointer;
 
- }
+}
+
+
+
+.container-s3 {
+    
+}
 
  
 
-.container-s3 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    min-height: 50vh;
-    background: var(--dorado1);
+
+/* SI ESTOY EN MOBILE QUE APLIQUE LA CLASE CONTAINER-S3 SI NO LA CLASE CONTENEDOR*/
+
+/* AHORA INVERSAMENTE */
+@media screen and (min-width: 768px) {
+    .contenedor {
+        display: flex;
+    }
+
+    .container-s3 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+        background: var(--dorado1);
+    }
 }
+
+@media screen and (max-width: 768px) {
+    .container-s3 {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        height: 60vh;
+        width: 60vh;
+    }
+}
+
+
+
+
+
 .flip-card {
     position: relative;
     width: 40vh;
     height: 50vh;
     margin: 10px;
- }
+}
 
 .flip-card .face {
     position: absolute;
@@ -364,7 +398,7 @@ ul {
 
 .flip-card .back p {
     letter-spacing: 1px;
-} 
+}
 
 .flip-card:hover .front {
     transform: perspective(600px) rotateY(180deg);
