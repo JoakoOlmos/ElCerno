@@ -40,7 +40,7 @@ body {
 .container-s1 .bg {
     background:
         linear-gradient(rgba(0, 0, 0, 0.9), rgba(82, 51, 10, 0)),
-        url(../images/bodega/portada.jpg);
+        url(../images/bodega/portada2.jpg);
     /* Ajusta los valores RGBA según tus preferencias */
     background-repeat: none;
     background-position: center center;
