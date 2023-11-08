@@ -107,9 +107,9 @@ body {
  
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .container-s1 .bg img {
-        height: 110px;
+        height: 400px;
         width: auto;
     }
 
@@ -129,17 +129,8 @@ body {
     margin: auto;
 }
 
-main h1{
-    text-align: center;
-}
-
-.wine-card-carrusel{
-    display: flex;
-}
-
 .container-cards {
-    background: var(--rojo);
-    max-width: 100%;
+    width: 100%;
     margin:auto;
     display: flex;
     flex-wrap: wrap;
@@ -164,10 +155,6 @@ main h1{
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     transition: all 300ms;
-}
-
-.item{
-    width: 10px;
 }
 
 .card:hover {
@@ -268,12 +255,6 @@ ul {
 
     }*/
 }
-
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 60%;
-      margin: auto;
-  }
 
 
 /** SECCION 3 **/
