@@ -277,41 +277,44 @@ ul {
 }
 
 
-
-.container-s3 {
-    
-}
-
+ 
  
 
 
 /* SI ESTOY EN MOBILE QUE APLIQUE LA CLASE CONTAINER-S3 SI NO LA CLASE CONTENEDOR*/
 
 /* AHORA INVERSAMENTE */
+
+/* ESTILO PARA SECCION 3 EN LA WEB */
 @media screen and (min-width: 768px) {
-    .contenedor {
-        display: flex;
+    .container-s3-mobile {
+        display: none;
     }
 
-    .container-s3 {
+    .container-s3-web {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+        height: 60vh;
+        width: 60vh;
+    }
+}
+
+/* ESTILO PARA SECCION 3 MOBILE */
+@media screen and (max-width: 768px) {
+    .container-web {
+        display: none;
+    }
+
+    .container-mobile {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         min-height: 50vh;
         background: var(--dorado1);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .container-s3 {
-        display: none;
-    }
-
-    .container {
-        display: flex;
-        height: 60vh;
-        width: 60vh;
     }
 }
 
@@ -404,7 +407,7 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
-    .container-s3 {
+    .container-s3-mobile {
         min-height: 70vh;
     }
 }
