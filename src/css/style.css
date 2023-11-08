@@ -107,9 +107,9 @@ body {
  
 
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .container-s1 .bg img {
-        height: 350px;
+        height: 110px;
         width: auto;
     }
 
@@ -119,42 +119,55 @@ body {
 }
 
 /** SECCION 2 **/
-
 .container-s2 {
-    background: linear-gradient(to top right, var(--dorado3),var(--carmesi));
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
+    max-width: 100vh;
+    height: 100%;
+    margin: auto;
 }
 
-.swiper-container {
-    width: 100%;
-    margin: auto;
+main h1{
+    text-align: center;
+}
+
+.wine-card-carrusel{
+    display: flex;
+}
+
+.container-cards {
+    background: #8d1e2d;
+    max-width: 100%;
+    margin:auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
+    padding-bottom: 50px;
+    /*top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
 }
 
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 400px;
-    margin: 0 auto;
-    padding: 30px;
-    border-radius: 15px;
+    width: 350px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     background: rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     transition: all 300ms;
-    min-height: 100%;
-    cursor: grab;
+}
+
+.item{
+    width: 10px;
 }
 
 .card:hover {
@@ -174,14 +187,7 @@ body {
 
 .card-header img {
     width: 110%;
-    margin-bottom: 20px;
-    transition: all 450ms;
-}
-
-.card-body {
-    padding: 20px 15px;
-    text-align: center;
-    width: 100%;
+    transition: all 300ms;
 }
 
 .card h3 {
@@ -193,31 +199,29 @@ body {
     justify-content: center;
 }
 
-.card .card-description p {
+.card p {
     margin-top: 20px;
     font-size: 14px;
     font-weight: 300;
-    color: var(--platedo);
+    color: var(--plateado);
     letter-spacing: 0.4px;
     flex-grow: 2;
-    line-height: 4;
 }
 
 .card span {
     color: var(--dorado1);
+    display: flex;
+    justify-content: center;
 }
 
-.card .card-body ul li{
-    padding-top: 5px;
-    margin: 0;
-    list-style-type: none;
-    color: var(--dorado1);
+ul {
+    list-style: none;
+    color: var(--plateado);
     text-align: center;
 }
 
-.card .card-header hr {
+.card hr {
     margin-top: 30px;
-    padding: 0;
     border: none;
     height: 0.2px;
     background: var(--plateado);
@@ -226,8 +230,6 @@ body {
 .card-footer {
     margin-top: 10px;
     display: flex;
-    color: #000000;
-    justify-content: space-between;
 }
 
 .card-footer a {
@@ -237,43 +239,20 @@ body {
     flex-grow: 1;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    width: 30px;
-    height: 30px;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    font-size: 10px;
-    font-weight: bold;
-    color: var(--dorado1);
-}
-
-.swiper-button-next:hover {
-    transform: scale(1.1);
-}
-
-.swiper-button-prev:hover {
-    transform: scale(1.1);
-}
-
-/** Media queries **/
 
 @media screen and (min-width: 768px) {
-    .swiper-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        padding-left: 30px;
+    .container-cards {
+        padding-bottom: 100px;
     }
 
     .card {
         display: flex;
         flex-direction: column;
-        width: 500px;
-        cursor: default;
-        padding: 10px;
+        margin: 100px 45px 0 45px;
+    }
+
+    .card:first-of-type {
+        padding-left: 25px;
     }
 
     .card-body {
@@ -282,44 +261,20 @@ body {
         flex-direction: column;
     }
 
-    .card-description {
-        flex-grow: 1;
-    }
-
-    .card-description p {
-        line-height: 40rem;
-        font-size: 20px;
-    }
-
-    .card .card-description ul li{
-        flex-grow: 1;
-        margin: 25px;
-    }
-
-    .card-footer a {
-        display: flex;
+    .card p {
         flex-grow: 2;
-        margin-bottom: 15px;
-        font-size: 15px;
-        text-align: center;
-        justify-content: center;
     }
+    /*.card:last-of-type {
 
-    .card-description span {
-        color: var(--dorado1);
-        display: flex;
-        justify-content: center;
-    }
-
-    .card .card-header hr {
-        padding: 0;
-        margin: 0;
-        border: none;
-        height: 0.2px;
-        background: var(--plateado);
-    }
-
+    }*/
 }
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 60%;
+      margin: auto;
+  }
+
 
 /** SECCION 3 **/
 .main .cards #theCarousel .carousel-inner{
@@ -621,9 +576,4 @@ body {
     padding: 5px;
     background-color: var(--carmesi);
     border-radius: 15px;
-}
-
-.boton-card:hover {
-    color: var(--dorado2);
-    text-decoration: none;
 }
