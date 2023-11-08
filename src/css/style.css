@@ -437,20 +437,21 @@ ul {
 .footer {
     background-color: var(--negro);
     color: var(--blanco);
-    display: flex;
-    flex-direction: column;
+    display: flex; 
     align-items: center;
     justify-content: center;
 }
 
 .footer img {
     height: auto;
-    width: 250px;
+    width: 200px; 
+    margin-right: 20px; 
 }
 
 .footer p {
-    padding-bottom: 50px;
-    margin-bottom: 25px;
+    padding-bottom: 4px;
+    margin-bottom: 5px;
+    margin-right: 50px; 
 }
 
 
