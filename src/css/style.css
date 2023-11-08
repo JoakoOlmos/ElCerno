@@ -275,9 +275,15 @@ ul {
 
 .section-s3 *{
     margin: 0 auto;
-    color:var(--blanco);
+    color: lightgrey;
     text-align: center;
+    font-family: 'averta';
 }
+.section-s3 h1{
+    font-size: 30px;
+}
+ buttom{
+    font-size: 20px;}
 
 
 
