@@ -29,7 +29,7 @@ fetch(url)
 
 function executeCardComponent(data) {
   console.log(JSON.stringify(data, 2, 2));
-  const wineListContainer = document.getElementById("wine-card-carrusel");
+  const wineListContainer = document.getElementById("s3-brand-carousel");
 
   // Itera sobre cada vino en el JSON
   // Itera sobre cada vino en el JSON
@@ -43,9 +43,7 @@ function executeCardComponent(data) {
           .replaceAll("{IMAGE}", vino.Imagen)
           .replaceAll("{NAME}", vino.Nombre)
           .replaceAll("{VARIETAL}", vino.Varietal)
-          .replaceAll("{STOCK}", vino.Stock)
-          .replaceAll("{PRICE}", vino.Precio);
-          //.replaceAll("item", index === 0 ? "item active" : "item");
+          .replaceAll("carousel-item", index === 0 ? "carousel-item active" : "carousel-item");
         //Crear un elemento div para almacenar la tarjeta y agregarlo al contenedor
         const wineCardContainer = document.createElement("div");
         wineCardContainer.innerHTML = wineCardHTML;
