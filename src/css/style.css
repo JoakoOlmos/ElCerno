@@ -120,6 +120,7 @@ body {
 
 /** SECCION 2 **/
 .container-s2 {
+    
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -130,6 +131,7 @@ body {
 }
 
 .container-cards {
+    background: linear-gradient(to right top, var(--carmesi), var(--dorado1));
     width: 100%;
     margin:auto;
     display: flex;
@@ -137,9 +139,6 @@ body {
     justify-content: center;
     position: relative;
     padding-bottom: 50px;
-    /*top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);*/
 }
 
 .card {
@@ -251,9 +250,6 @@ ul {
     .card p {
         flex-grow: 2;
     }
-    /*.card:last-of-type {
-
-    }*/
 }
 
 
@@ -576,4 +572,9 @@ ul {
     padding: 5px;
     background-color: var(--carmesi);
     border-radius: 15px;
+}
+
+.boton-card:hover {
+    text-decoration: none;
+    color: var(--dorado2);
 }
