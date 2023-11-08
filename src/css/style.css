@@ -146,6 +146,9 @@ body {
 }
 
 .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     width: 350px;
     margin-top: 50px;
     margin-bottom: 50px;
