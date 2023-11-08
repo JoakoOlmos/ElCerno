@@ -269,16 +269,26 @@ ul {
 
 .section-s3 *{
     margin: 0 auto;
-    color:var(--blanco);
+    color: lightgrey;
     text-align: center;
+    font-family: 'averta';
 }
+.section-s3 h1{
+    font-size: 30px;
+}
+
+.ficha-tecnica{
+    font-size: 15px !important;
+    background: peachpuff !important;
+ }
 
 
 
 /* realizar de forma recursiva todos los elementos de .carousel-inner  transformar su texto a color blanco */
 
-.carousel-inner * {
-    color: #fff !important;
+.carousel-inner .carousel-caption{
+    background-color: rgba(88, 41, 41, 0.7);
+    border-radius: 30px;
 
 }
 
@@ -303,6 +313,7 @@ ul {
     }
 
     .container-s3-web {
+        width: 70vh;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
