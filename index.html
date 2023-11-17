@@ -8,12 +8,23 @@
   <link rel="stylesheet" href="./src/css/normalized.css">
   <link rel="stylesheet" href="./src/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<<<<<<< HEAD
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <title>Bodega El Cerno</title>
+=======
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <title>Bodega El Cerno</title>
+>>>>>>> ge/add_boostrap
 </head>
 
 <body>
+
   <section class="container-s1">
     <div class="bg">
       <img src="src/images/logodorado.png">
@@ -21,7 +32,7 @@
       <div class="bienvenidos">
         <p>
           <em>
-            Viña el Cerno es una bodega donde acompañado
+            Viña el Cerno es una bodega donde, acompañado
             de deliciosos Vinos Orgánicos,
           </em>
           <em>
@@ -33,22 +44,15 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
   <section class="contaniner-s2">
     <div class="container-cards">
-      <div class="card">
-        <div class="card-header">
+      <div class="my-card">
+        <div class="my-card-header">
           <img src="src/images/bodega/bodega.jpg" alt="Card1">
         </div>
-        <div class="card-body">
-          <h3 class="card-title">Nuestra Bodega</h3>
-          <p class="card-description"> <!-- probar flex grow para tenerlos todos del mismo tamaño -->
+        <div class="my-card-body">
+          <h3 class="my-card-title">Nuestra Bodega</h3>
+          <p class="my-card-description"> <!-- probar flex grow para tenerlos todos del mismo tamaño -->
             <span>DESDE 1996</span> <br><br>
             Bodega Viña el Cerno es una gran familia. Todos se complementan y son necesarios con el fin de transmitir
             sus propias experiencias a cada uno de los visitantes, les enseñamos nuestros vinos, producto del trabajo
@@ -57,37 +61,37 @@
             encontrando en cada uno de ellos su mensaje especial.
           </p>
           <hr>
-          <div class="card-footer">
-            <a href="#" class="boton-card">Quienes Somos</a>
+          <div class="my-card-footer">
+            <a href="#" class="my-boton-card">Quienes Somos</a>
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header">
+      <div class="my-card">
+        <div class="my-card-header">
           <img src="src/images/bodega/fondoswiper.jpg" alt="Card2">
         </div>
-        <div class="card-body">
-          <h3 class="card-title">Visitas y Degustaciones</h3>
-          <p class="card-description">
-            <span>TURISMO</span><br><br><br>
-            Lunes a Sábados y Feriados de 10hs a 17hs <br>
-            Domingo Cerrado <br><br><br>
+        <div class="my-card-body">
+          <h3 class="my-card-title">Visitas y Degustaciones</h3>
+          <p class="my-card-description">
+            <span>TURISMO</span><br><br>
+            Lunes a Sábados y Feriados<br>10hs a 17hs<br><br>
+            Domingos<br> Cerrado<br><br><br>
             Español/English
           </p>
           <hr>
         </div>
-        <div class="card-footer">
-          <a href="#" class="boton-card">Visitá nuestra Bodega</a>
-          <a href="#" class="boton-card">Reservas</a>
+        <div class="my-card-footer">
+          <a href="#" class="my-boton-card">Visitá nuestra Bodega</a>
+          <a href="#" class="my-boton-card">Reservas</a>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header">
+      <div class="my-card">
+        <div class="my-card-header">
           <img src="src/images/bodega/coleccion.jpg" alt="Card3">
         </div>
-        <div class="card-body">
-          <h3 class="card-title">Nuestros Vinos y Espumosos</h3>
-          <p class="card-description">
+        <div class="my-card-body">
+          <h3 class="my-card-title">Nuestros Vinos y Espumosos</h3>
+          <p class="my-card-description">
           <ul>
             <li>Vinos de Autor</li>
             <li>Viña el Cerno</li>
@@ -99,21 +103,53 @@
           </p>
           <hr>
         </div>
-        <div class="card-footer">
-          <a href="#" class="boton-card">Nuestras Historias</a>
+        <div class="my-card-footer">
+          <a href="#" class="my-boton-card">Nuestras Historias</a>
+        </div>
       </div>
-    </div>
   </section>
 
   <main>
-    <h1>Nuestros vinos</h1>
-    <section id="cards"  style="background-color: #ffffff;">
-            <div id="wine-card-carrusel"  >
+    <section id="cards" class="section-s3">
+      <br><hr>
+      <h1 >NUESTRAS MARCAS </h1>
+      <hr>
+      <div class="container-s3-web container-s3-mobile">
+        <div id="carouselExampleDark" class="carousel carousel-ligth slide">
+
+          <div id="s3-brand-carousel" class="carousel-inner">
+           <!-- ESTA SECCION SE LLENA CON cardComponent.js -->
           </div>
-     </section>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
 
   
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-body">
+              <embed src="./src/templates/documents/ficha_tecnica.pdf" type="application/pdf" width="100%" height="600px" />
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
   <footer>
     <div class="footer">
       <img src="src/images/logoplateado.png">
@@ -123,21 +159,15 @@
     </div>
   </footer>
 
-
-
-
-  <script>
-    scr = "/index.js"
-  </script>
-
-
-
-
+  <script scr="/index.js"></script>
 
 </body>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ge/add_boostrap
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
 
 <script src="./src/component/cardComponent/cardComponent.js"></script>

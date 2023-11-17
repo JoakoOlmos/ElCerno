@@ -1,7 +1,6 @@
 /** GLOBALES **/
 body {
     margin: 0;
-    font-family: 'Gotham SSm A', sans-serif;
 }
 
 .contenedor {
@@ -10,7 +9,7 @@ body {
     margin: 0 auto;
 }
 
-:root{
+:root {
     --dorado1: #d2ae6d;
     --dorado2: #d0a96a;
     --dorado3: #c99960;
@@ -21,7 +20,7 @@ body {
     --negro: #000000;
     --plateado: #d6d6d7;
     --gris: #84848c;
-    --marron: #846c4c; 
+    --marron: #846c4c;
 }
 
 
@@ -38,10 +37,10 @@ body {
 }
 
 .container-s1 .bg {
-    background: 
-    linear-gradient( rgba(0, 0, 0, 0.9), rgba(82, 51, 10, 0)),
-    url(../images/bodega/portada.jpg);
-     /* Ajusta los valores RGBA según tus preferencias */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.9), rgba(82, 51, 10, 0)),
+        url(../images/bodega/portada2.jpg);
+    /* Ajusta los valores RGBA según tus preferencias */
     background-repeat: none;
     background-position: center center;
     background-size: cover;
@@ -52,7 +51,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+
 }
 
 .container-s1 {
@@ -65,12 +64,13 @@ body {
 .container-s1 .bg img {
     height: 150px;
     width: auto;
-    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation: fadeIn;
+    /* referring directly to the animation's @keyframe declaration */
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
 }
 
-.bienvenidos p{
+.bienvenidos p {
     color: var(--blanco);
     display: flex;
     flex-direction: column;
@@ -78,22 +78,25 @@ body {
     font-size: 23px;
     margin: 10px;
     padding-bottom: 50px;
-    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation: fadeIn;
+    /* referring directly to the animation's @keyframe declaration */
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
     font-size: 18px;
-    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation: fadeInUp;
+    /* referring directly to the animation's @keyframe declaration */
     animation-duration: 7s;
 }
 
 @keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 .bg span {
     text-align: center;
@@ -104,12 +107,12 @@ body {
     font-size: 30px;
     padding: 15px;
 }
- 
 
 
-@media screen and (max-width: 768px) {
+
+@media screen and (min-width: 768px) {
     .container-s1 .bg img {
-        height: 110px;
+        height: 300px;
         width: auto;
     }
 
@@ -129,32 +132,19 @@ body {
     margin: auto;
 }
 
-main h1{
-    text-align: center;
-}
-
-.wine-card-carrusel{
-    display: flex;
-}
-
 .container-cards {
-    background: #8d1e2d;
-    max-width: 100%;
-    margin:auto;
+    background: linear-gradient(to right top, var(--bordo), var(--rojo));
+    width: 100%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    padding-bottom: 50px;
-    /*top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);*/
 }
 
-.card {
+.my-card {
     width: 350px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 10px;
     padding: 20px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     background: rgba(255, 255, 255, 0.1);
@@ -166,31 +156,27 @@ main h1{
     transition: all 300ms;
 }
 
-.item{
-    width: 10px;
-}
-
-.card:hover {
+.my-card:hover {
     transform: translateY(-10px);
 }
 
-.card:hover .card-header img {
+.my-card:hover .my-card-header img {
     transform: scale(1.1);
 }
 
-.card-header {
+.my-card .my-card-header {
     width: 100%;
     height: 180px;
     border-radius: 14px;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
-.card-header img {
+.my-card .my-card-header img {
     width: 110%;
     transition: all 300ms;
 }
 
-.card h3 {
+.my-card h3 {
     font-size: 20px;
     font-weight: 400;
     margin-top: 20px;
@@ -199,44 +185,48 @@ main h1{
     justify-content: center;
 }
 
-.card p {
-    margin-top: 20px;
-    font-size: 14px;
+.my-card p {
+    margin-top: 10px;
     font-weight: 300;
-    color: var(--plateado);
-    letter-spacing: 0.4px;
-    flex-grow: 2;
-}
-
-.card span {
-    color: var(--dorado1);
-    display: flex;
-    justify-content: center;
-}
-
-ul {
-    list-style: none;
     color: var(--plateado);
     text-align: center;
 }
 
-.card hr {
+.my-card p span {
+    color: var(--dorado1);
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+ul {
+    list-style: none;
+    color: var(--dorado1);
+    text-align: center;
+    line-height: 3;
+}
+
+.my-card hr {
     margin-top: 30px;
     border: none;
     height: 0.2px;
     background: var(--plateado);
 }
 
-.card-footer {
+.my-card-footer {
     margin-top: 10px;
     display: flex;
+    color: var(--blanco);
+    justify-content: space-between;
 }
 
-.card-footer a {
+.my-card-footer a {
+    background: var(--carmesi);
     text-decoration: none;
+    color: var(--dorado2);
+    flex-grow: 2;
     text-align: center;
-    color: var(--dorado1);
-    flex-grow: 1;
 }
 
 
@@ -245,57 +235,124 @@ ul {
         padding-bottom: 100px;
     }
 
-    .card {
+    .my-card {
         display: flex;
         flex-direction: column;
         margin: 100px 45px 0 45px;
     }
 
-    .card:first-of-type {
+    .my-card:first-of-type {
         padding-left: 25px;
     }
 
-    .card-body {
+    .my-card-body {
         flex-grow: 1;
         display: flex;
         flex-direction: column;
     }
 
-    .card p {
+    .my-card p {
         flex-grow: 2;
     }
-    /*.card:last-of-type {
-
-    }*/
 }
-
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 60%;
-      margin: auto;
-  }
 
 
 /** SECCION 3 **/
-.main .cards #theCarousel .carousel-inner{
+.main .cards #theCarousel .carousel-inner {
     height: 100vh;
     background-color: #322a7c;
+ 
 }
 
-.container-s3 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    min-height: 50vh;
-    background: var(--dorado1);
+.section-s3{
+    background: linear-gradient(to right top, var(--negro), var(--dorado3), var(--negro) );
+    
 }
+
+.section-s3 *{
+    margin: 0 auto;
+    color: lightgrey;
+    text-align: center;
+    font-family: 'averta';
+}
+.section-s3 h1{
+    font-size: 30px;
+}
+
+.ficha-tecnica{
+    font-size: 15px !important;
+    background: peachpuff !important;
+ }
+
+
+
+/* realizar de forma recursiva todos los elementos de .carousel-inner  transformar su texto a color blanco */
+
+.carousel-inner .carousel-caption{
+    background-color: rgba(88, 41, 41, 0.7);
+    border-radius: 30px;
+
+}
+
+.carousel-inner:hover {
+    cursor: pointer;
+
+}
+
+
+ 
+ 
+
+
+/* SI ESTOY EN MOBILE QUE APLIQUE LA CLASE CONTAINER-S3 SI NO LA CLASE CONTENEDOR*/
+
+/* AHORA INVERSAMENTE */
+
+/* ESTILO PARA SECCION 3 EN LA WEB */
+@media screen and (min-width: 768px) {
+    .container-s3-mobile {
+        display: none;
+    }
+
+    .container-s3-web {
+        width: 70vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        min-height: 50vh;
+        height: 60vh;
+        width: 60vh;
+    }
+}
+
+/* ESTILO PARA SECCION 3 MOBILE */
+@media screen and (max-width: 768px) {
+    .container-web {
+        display: none;
+    }
+
+    .container-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+        background: var(--dorado1);
+    }
+}
+
+
+
+
+
 .flip-card {
     position: relative;
     width: 40vh;
     height: 50vh;
     margin: 10px;
- }
+}
 
 .flip-card .face {
     position: absolute;
@@ -364,7 +421,7 @@ ul {
 
 .flip-card .back p {
     letter-spacing: 1px;
-} 
+}
 
 .flip-card:hover .front {
     transform: perspective(600px) rotateY(180deg);
@@ -375,175 +432,10 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
-    .container-s3 {
+    .container-s3-mobile {
         min-height: 70vh;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.container-s3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-.flip-card {
-    position: relative;
-    width: 400px;
-    height: 450px;
-}
-
-.flip-card .face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: 0.5s;
-}
-
-.flip-card .front {
-    transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0 5px 10px var(--gris);
-}
-
-.flip-card .front img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.flip-card .front h3 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 45px;
-    line-height: 50px;
-    color: var(--blanco);
-    background: rgba(136, 56, 48, 0.4);
-    text-align: center;
-}
-
-.card:hover .front {
-    transform: perspective(600px) rotateY(180deg); 
-}
-
-.flip-card .back {
-    transform: perspective(600px) rotateY(180deg);
-    background: var(--dorado1);
-    padding: 15px;
-    color: var(--negro);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    box-shadow: 0 5px 10px var(--negro);
-}
-
-.flip-card .back .info {
-    border-top: 1.5px solid var(--negro);
-    height: 50px;
-    line-height: 50px;
-}
-
-.flip-card .back .info a {
-    color: var(--negro);
-    text-decoration: none;
-    margin: 3px;
-    padding: 5px;
-}
-
-.flip-card .back h3 {
-    font-size: 30px;
-    margin-top: 20px;
-    letter-spacing: 2px;
-}
-
-.flip-card .back p {
-    letter-spacing: 1px;
-}
-
-.card:hover .back {
-    transform: perspective(600px) rotateY(360deg); 
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -552,28 +444,34 @@ ul {
 .footer {
     background-color: var(--negro);
     color: var(--blanco);
-    display: flex;
-    flex-direction: column;
+    display: flex; 
     align-items: center;
     justify-content: center;
 }
 
 .footer img {
-    height: auto;
-    width: 250px;
+    height: 175px;
+    width: 200px; 
+    margin-right: 20px; 
 }
 
 .footer p {
-    padding-bottom: 50px;
-    margin-bottom: 25px;
+    padding-bottom: 4px;
+    margin: 0;
 }
 
 
 /** BOTONES **/
-.boton-card {
+.my-boton-card {
     display: block;
     margin: 3px;
     padding: 5px;
     background-color: var(--carmesi);
     border-radius: 15px;
+}
+
+.my-boton-card:hover {
+    text-decoration: none;
+    border: 1px solid var(--plateado);
+    color: var(--dorado2);
 }

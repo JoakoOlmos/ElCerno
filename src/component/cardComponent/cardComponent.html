@@ -1,30 +1,9 @@
-<div class="item">
-
-  <div class="flip-card">
-    <div class="face front">
-      <img src="src/images/wines/{IMAGE}" onerror="this.src='src/images/wines/errorimg.png';" alt="{NAME}" width="600"
-        height="424">
-      <h3>{NAME}</h3>
-    </div>
-
-    <div class="face back">
-
-
-      <hr>
-      {VARIETAL}
-      <hr>
-      Stock: {STOCK}
-      <hr>
-      Precio: ${PRICE}
-     
-
-      <div class="info">
-        <a href="#">Ver Más</a>
-      </div>
-    </div>
+<div class="carousel-item" data-bs-interval="10000">
+  <img src="src/images/wines/{IMAGE}" onerror="this.src='src/images/wines/errorimg.png';" class="d-block w-100" alt="...">
+  <div class="carousel-caption  d-md-block">
+    <h1>{NAME}</h1>
+    <h4>{VARIETAL}</h4>
+    <hr><br>
+    <button class="btn btn-light ficha-tecnica" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Más información</button>
   </div>
-
-
-
-
 </div>
